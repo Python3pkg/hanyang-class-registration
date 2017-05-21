@@ -1,2 +1,2 @@
-import sugang
+from . import sugang
 

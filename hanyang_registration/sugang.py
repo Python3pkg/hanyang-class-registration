@@ -136,7 +136,7 @@ class Sinchung(object):
                 result = json.loads(res.text)
 
             self.logger.info(
-                u'code: {}, message: {}, current point: {}, max point {}'.format(
+                'code: {}, message: {}, current point: {}, max point {}'.format(
                     code, result.get('outMsg', ''), result.get('scHahjeom', ''), result.get('maxHakjeom', '')))
 
             req = self.session.post(self.NET_FUNNEL_END_URL.format(key, int(time.time()*1000)), headers=headers)
